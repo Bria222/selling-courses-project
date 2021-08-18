@@ -1,0 +1,32 @@
+{% extends 'projects/main.html' %}
+
+{% block content %}
+<h1 class="text-center bg-secondary">projects</h1>
+<div class="container">
+    <table class="table table-info">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">TITLE</th>
+            <th scope="col">DESCRIBTION</th>
+            <th scope="col">TIME CREATED</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+    {% for projects in projectlist  %}
+          <tr>
+            <th scope="row"><a href="#">{{ projects.id}}</a></th>
+            <td><a href="#" >{{projects.title}}</a></td>
+            <td>{{projects.description}}</td>
+            <td>{{projects.created}}</td>
+            <td><a href="#">EDIT</a></td>
+          </tr>
+    {% endfor %}
+        </tbody>
+        
+      </table>
+</div>
+
+
+{% endblock content %}

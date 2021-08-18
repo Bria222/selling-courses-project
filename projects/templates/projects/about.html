@@ -1,0 +1,34 @@
+{% extends 'projects/main.html' %}
+
+{% block content %}
+<h1 class="text-center bg-secondary">about</h1>
+<img src="{{project.featured_image.url}}" alt="" style="max-width: 300px;"/>
+<div class="container">
+  
+    <table class="table table-info">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">TITLE</th>
+            <th scope="col">DESCRIBTION</th>
+            <th scope="col">image</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+    {% for projects in project  %}
+    
+          <tr>
+            <th scope="row">{{ projects.id}}</th>
+            <td>{{projects.title}}</td>
+            <td>{{projects.description}}</td>
+            <td><img src="{{projects.featured_image.url}}" alt=""></td>
+            
+          </tr>
+          
+    {% endfor %}
+        </tbody>
+        
+      </table>
+</div>
+{% endblock content %}
