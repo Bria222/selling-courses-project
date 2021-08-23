@@ -12,3 +12,10 @@ body{
     height: 400px;
     width: 100%;
 }
+
+.tty{
+    background-color: rgb(236, 214, 186);
+    margin-left: 20px;
+    margin-right: 8px;
+    padding:2px;
+}
