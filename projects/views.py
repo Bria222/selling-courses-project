@@ -27,7 +27,7 @@ def projects(request):
 def createProject(request):
     form = ProjectForm()
     if request.method == 'POST':
-       form = ProjectForm(request.POST)
+       form = ProjectForm(request.POST,request.files)
        if form.is_valid():
           form.save()
           return redirect('home')
